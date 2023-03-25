@@ -1,0 +1,45 @@
+.postWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 400px) {
+  .postWrapper {
+    grid-template-columns: 1fr
+  }
+}
+
+.post, .skeleton {
+  --borderColor: #00000030;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 30px;
+  color: #000;
+  border: 1px solid var(--borderColor);
+  min-height: 200px;
+}
+
+.skeleton {
+  min-height: 300px;
+}
+
+.divider {
+  width: 100%;
+  border: 1px solid var(--borderColor);
+  margin: 16px 0;
+}
+
+.skeletonTitle {
+  background-color: #e7edf1;
+  border-radius: 10px;
+  height: 26px;
+  width: 80%;
+}
+
+.skeletonText {
+  background-color: #e7edf1;
+  border-radius: 8px;
+  height: 16px;
+  margin-top: 8px;
+}
